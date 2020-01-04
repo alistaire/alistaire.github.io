@@ -1,0 +1,6 @@
+<div id="{{include.name}}"></div>
+
+<script type="text/javascript">
+    var vlSpec = {{ include.chart | jsonify }};
+    vegaEmbed("#{{ include.name }}", vlSpec, {theme: 'fivethirtyeight'}).catch(console.warn);
+</script>
